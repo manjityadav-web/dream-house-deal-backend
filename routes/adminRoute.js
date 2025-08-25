@@ -7,7 +7,7 @@ adminRoute.post('/add-property', async (req, res) => {
     try {
         const { title, price, area, description, location, bedroom, bathroom } = req.body;
         const { pic } = req.files;
-        pic.mv("uploads/" + pic?.name, (err) => {
+        pic.mv("Uploads/" + pic?.name, (err) => {
             if (err) {
                 res.json({
                     code: 400,
