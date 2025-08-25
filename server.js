@@ -10,7 +10,12 @@ import cors from 'cors';
 const app = express();
 app.use(express.json());
 app.use(fileUpload());
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'https://dream-house-deal-frontend.vercel.app',
+        credentials: true
+    }
+));
 
 
 dbConnect();
